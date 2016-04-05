@@ -3,7 +3,7 @@ memory: 256M
 disk_quota: 256M
 instances: 2
 hosts:
-- prod-cachee-portail-dfy-v2-xpbp8114
+- prod-cachee-portail-dfy-v2-teacher
 path: .
 buildpack: php_buildpack
 env:
