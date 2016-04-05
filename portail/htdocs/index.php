@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Workshop : Portail DFY</title>
+	<title>Workshop : Portail DFY v2</title>
 	<link rel="stylesheet" type="text/css" href="css/jquery.suggest.css" />
 	<link rel="stylesheet" type="text/css" href="css/ui-lightness/jquery-ui-1.8.23.custom.css" />
 	<link rel="stylesheet" type="text/css" href="css/jMenu.jquery.css" />
@@ -63,13 +63,11 @@
 				<div id="cours_orange" style="margin-right=5%;">
 				<table>
 					<?php
-						$NotBindingMessage = "<br>No service binding detected : <b>no database available</b><br>Please watch logs for more details<br>";
-						$stdout = fopen('php://stdout', 'w');
-						$stderr = fopen('php://stderr', 'w');
+						$NotBindingMessage = "<br>No service binding detected : <b>no database available</b><br>Please watch logs for more details<br>"; 
 						//Log aggregator !!!
 						$jtab = json_decode($_ENV["VCAP_APPLICATION"]);
 						//APP GENERATED stdout
-						fwrite($stdout, 'Jai encore lu VCAP_APPLICATION\n');
+						file_put_contents('php://stdout', "Jai encore lu VCAP_APPLICATION\n");
 						//Manipulation des env -> changer de vhost (buildpacks)
 						$jservices = json_decode($_ENV["VCAP_SERVICES"]);
 						echo "<br>Nom de l'application courante : <b>" . $jtab->application_name . "</b><br>";
@@ -88,8 +86,6 @@
 						{
 							echo "<br>Service detected : <b>" . $js[0]->{'name'} . "</b>";
 						}			
-						fclose($stderr);
-						fclose($stdout);
 					?>
 				</table></td>
 				</tr></table>

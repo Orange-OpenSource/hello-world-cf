@@ -7,5 +7,4 @@ if (isset($_GET['param']))
 	$Reponse = $Reponse . "J'ai reecrit : " . $_GET['param'] ."<br>";
 }
 echo $Reponse;
-return;
 ?>

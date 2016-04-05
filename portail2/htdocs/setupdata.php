@@ -27,6 +27,6 @@ try
 catch(Exception $e)
 {
 	//APP GENERATED stderr
-	fwrite($stderr, "CATCH => Erreur  : " . $e->getMessage());
+	file_put_contents('php://stderr', "CATCH => Erreur  : " . $e->getMessage());
 	error_log("CATCH => Erreur  : " . $e->getMessage());
 }
