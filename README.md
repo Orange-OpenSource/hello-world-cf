@@ -24,7 +24,7 @@ If you do not use redis here you can change to php version 7.
 
 ### Why the file [php.ini](/.bp-config/php/php.ini) is overwrite ?
 
-To change the value of the key `session.name` which is set to `JSESSIONID` by default to `PHPSESSIONID`.
+To change the value of the key `session.name` which is set to `JSESSIONID` by default (we change it to `PHPSESSIONID`).
 
 Indeed, `JSESSIONID` create a sticky session with Cloud Foundry. In our example we do not want to use sticky session but use a real session sharing over redis.
 
