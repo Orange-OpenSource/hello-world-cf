@@ -40,14 +40,8 @@ class GlobalExtension implements ExtensionInterface
         }
         $dirname = dirname($_SERVER['SCRIPT_NAME']);
         $dirname = ($dirname == '/') ? "" : $dirname;
-        if (empty($_SERVER["REQUEST_SCHEME"])) {
-            if (!empty($_SERVER["HTTP_X_FORWARDED_PROTO"])) {
-                $_SERVER["REQUEST_SCHEME"] = $_SERVER["HTTP_X_FORWARDED_PROTO"];
-            } else if (!empty($_SERVER["HTTPS"])) {
-                $_SERVER["REQUEST_SCHEME"] = 'https';
-            } else {
-                $_SERVER["REQUEST_SCHEME"] = 'http';
-            }
+        if (!empty($_SERVER["HTTP_X_FORWARDED_PROTO"])) {
+            $_SERVER["REQUEST_SCHEME"] = $_SERVER["HTTP_X_FORWARDED_PROTO"];
         }
         $path = $_SERVER["REQUEST_SCHEME"] . '://' . $_SERVER["SERVER_NAME"] . $port . $dirname . $res;
         return $path;

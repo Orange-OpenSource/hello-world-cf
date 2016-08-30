@@ -10,6 +10,9 @@
  * Date: 18/08/2014
  */
 $vcapApplication = json_decode($_ENV["VCAP_APPLICATION"], true);
+if (!empty($_SERVER["HTTP_X_FORWARDED_PROTO"])) {
+    $_SERVER["REQUEST_SCHEME"] = $_SERVER["HTTP_X_FORWARDED_PROTO"];
+}
 if (empty($_SERVER["REQUEST_SCHEME"])) {
     if (!empty($_SERVER["HTTP_X_FORWARDED_PROTO"])) {
         $_SERVER["REQUEST_SCHEME"] = $_SERVER["HTTP_X_FORWARDED_PROTO"];
