@@ -1,0 +1,287 @@
+/*
+* Base structure
+*/
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+}
+
+#contextMenu {
+    position: absolute;
+    display: none;
+    z-index: 10000;
+}
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        background-color: #121212;
+        color: white;
+        border-right: 1px solid #eee;
+    }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+    margin-right: -21px; /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+    width: 100%;
+}
+
+.nav-sidebar > li {
+    float: none;
+    margin-right: 0;
+}
+
+.nav-sidebar > li > a {
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 124%;
+}
+
+.nav-sidebar > li > a:hover .add {
+    border-left: 1px solid #121212;
+}
+
+.nav-sidebar > li > a .add {
+    float: right;
+    padding: 15px;
+    position: relative;
+    top: -15px;
+    border-left: 1px solid #FF5500;
+}
+
+.nav-sidebar > li > a .add:hover {
+    background-color: #121212;
+}
+
+.nav-sidebar > .active > a {
+    color: #fff;
+    background-color: #428bca;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+.main .page-header {
+    margin-top: 0;
+}
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.placeholders h4 {
+    margin-bottom: 0;
+}
+
+.placeholder {
+    margin-bottom: 20px;
+}
+
+.placeholder img {
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.navbar-brand img {
+    display: block;
+    height: 49px;
+    float: right;
+    position: relative;
+    top: -15px;
+    margin-left: 5px;
+}
+
+.contextMenu {
+    display: none;
+}
+
+.contextMenu .dropdown-menu:before {
+    top: 8px;
+    border-bottom-color: #fb905b;
+}
+
+.contextMenu {
+    position: absolute;
+    z-index: 1500;
+}
+
+.contextMenu .dropdown-menu {
+
+    background-color: #fb905b;
+}
+
+.sidebar {
+    padding-top: 0;
+}
+
+.userNav {
+    left: 1px;
+}
+
+.userNav button {
+    font-size: 14px;
+    font-weight: 600;
+    border-left: 5px solid transparent;
+    height: 50px;
+    margin-right: 1px;
+    background-color: #fe7105;
+    color: #121212;
+    text-shadow: 1px 1px 0px #1c1c1c;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px rgba(250, 250, 250, 0.5);
+}
+
+.userNav button .caret {
+    border-top-color: #121212;
+    border-bottom-color: #121212;
+    margin-left: 20px;
+}
+
+.userNav button:hover .caret {
+    border-top-color: white;
+    border-bottom-color: white;
+    margin-left: 20px;
+}
+
+.userNav button:hover {
+    color: white;
+    border: 0;
+    padding-left: 18px;
+    text-shadow: 1px 1px 0px #1c1c1c;
+    text-decoration: none;
+
+    background-color: rgba(222, 97, 1, 0.71);
+}
+
+.datagrid td {
+    text-align: left;
+}
+
+.datagrid th {
+    cursor: pointer;
+}
+
+.datagrid thead {
+    background-color: #f9f9f9;
+}
+
+.datagrid thead .datagrid-header-title {
+    float: left;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+.datagrid thead .datagrid-header-left {
+    float: left;
+}
+
+.datagrid thead .datagrid-header-right {
+    float: right;
+}
+
+.datagrid thead .datagrid-header-right .search,
+.datagrid thead .datagrid-header-left .search,
+.datagrid thead .datagrid-header-right .filter,
+.datagrid thead .datagrid-header-left .filter {
+    margin-bottom: 0;
+    margin-left: 8px;
+}
+
+.datagrid thead .datagrid-header-right .search .dropdown-menu,
+.datagrid thead .datagrid-header-left .search .dropdown-menu,
+.datagrid thead .datagrid-header-right .filter .dropdown-menu,
+.datagrid thead .datagrid-header-left .filter .dropdown-menu {
+    top: auto;
+    left: auto;
+}
+
+.datagrid thead .sorted {
+    padding-right: 30px;
+    color: #333333;
+    text-shadow: 'none';
+    background-color: #f1f1f1;
+    background-image: -moz-linear-gradient(top, #f9f9f9, #e5e5e5);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9), to(#e5e5e5));
+    background-image: -webkit-linear-gradient(top, #f9f9f9, #e5e5e5);
+    background-image: -o-linear-gradient(top, #f9f9f9, #e5e5e5);
+    background-image: linear-gradient(to bottom, #f9f9f9, #e5e5e5);
+    background-repeat: repeat-x;
+    border-color: #e5e5e5 #e5e5e5 #bebebe;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff9f9f9', endColorstr='#ffe5e5e5', GradientType=0);
+}
+
+.datagrid thead .sorted i {
+    float: right;
+    margin-top: 2px;
+    margin-right: -22px;
+}
+
+.datagrid thead .sortable {
+    position: relative;
+    cursor: pointer;
+}
+
+.datagrid thead .sortable:hover {
+    color: #333333;
+    text-shadow: 'none';
+    background-color: #f1f1f1;
+    background-image: -moz-linear-gradient(top, #f9f9f9, #e5e5e5);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9), to(#e5e5e5));
+    background-image: -webkit-linear-gradient(top, #f9f9f9, #e5e5e5);
+    background-image: -o-linear-gradient(top, #f9f9f9, #e5e5e5);
+    background-image: linear-gradient(to bottom, #f9f9f9, #e5e5e5);
+    background-repeat: repeat-x;
+    border-color: #e5e5e5 #e5e5e5 #bebebe;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff9f9f9', endColorstr='#ffe5e5e5', GradientType=0);
+}

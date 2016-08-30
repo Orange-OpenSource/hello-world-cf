@@ -1,0 +1,29 @@
+{
+  "name": "elpaaso/tester",
+  "description": "description_text",
+  "minimum-stability": "stable",
+  "license": "APACHE 2.0",
+  "authors": [
+    {
+      "name": "Arthur Halet",
+      "email": "arthur.halet@orange.com"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "elpaaso\\tester": "src/"
+    }
+  },
+  "require": {
+    "ext-soap": "*",
+    "ext-pdo": "*",
+    "ext-redis": "*",
+    "ext-pdo_mysql": "*",
+    "php": "5.6.*",
+    "league/plates": "2.1.0",
+    "nikic/fast-route": "0.1.0",
+    "cloudfoundry-community/cf-helper-php": "1.6.*",
+    "tpyo/amazon-s3-php-class": "0.5.0",
+    "phpunit/phpunit": "4.3.1"
+  }
+}

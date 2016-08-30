@@ -1,0 +1,10 @@
+---
+#manifest for php cf test
+name: elpaaso-phptester
+instance: 2
+memory: 256M
+env:
+  WSC_LOGIN: test
+  WSC_PASSWD: Test
+  WSP_SERVICE_NAME: catalog
+buildpack: php_buildpack

@@ -1,0 +1,62 @@
+[
+  {
+    "method": "GET",
+    "route": "",
+    "controller": "welcome.php"
+  },
+  {
+    "method": "GET",
+    "route": "\/test",
+    "controller": "test.php"
+  },
+  {
+    "method": "GET",
+    "route": "\/config",
+    "controller": "tests\/config.php"
+  },
+  {
+    "method": "GET",
+    "route": "\/logs",
+    "controller": "tests\/logs.php"
+  },
+  {
+    "method": "GET",
+    "route": "\/databases",
+    "controller": "tests\/databases.php"
+  },
+  {
+    "method": "POST",
+    "route": "\/databases",
+    "controller": "tests\/databases.php"
+  },
+  {
+    "method": "GET",
+    "route": "\/soap",
+    "controller": "tests\/soap.php"
+  },
+  {
+    "method": "POST",
+    "route": "\/soap",
+    "controller": "tests\/soap.php"
+  },
+  {
+    "method": "GET",
+    "route": "\/killapp",
+    "controller": "tests\/killapp.php"
+  },
+  {
+    "method": "GET",
+    "route": "\/session",
+    "controller": "tests\/session.php"
+  },
+  {
+    "method": "GET",
+    "route": "\/redis",
+    "controller": "tests\/redis.php"
+  },
+  {
+    "method": "POST",
+    "route": "\/redis",
+    "controller": "tests\/redis.php"
+  }
+]
