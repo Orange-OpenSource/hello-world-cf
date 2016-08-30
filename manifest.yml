@@ -3,6 +3,7 @@
 name: elpaaso-phptester
 instance: 2
 memory: 256M
+random-route: true
 env:
   WSC_LOGIN: test
   WSC_PASSWD: Test
