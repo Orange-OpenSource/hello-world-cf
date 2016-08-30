@@ -4,6 +4,8 @@ This is the support for a Cloud Foundry workshop.
 
 It covers a wide range of usecases in PHP inside Cloud Foundry and intend to show how to be a [12 factors app](https://12factor.net).
 
+The only interesting part for developers to use this repo as a cheatsheet is to see components inside [cloud-php-samples](cloud-php-samples) which are made independent for this purpose.
+
 ## How to deploy
 
 1. clone this repo or download the zip here: https://github.com/Orange-OpenSource/hello-world-cf/archive/master.zip and unzip this zip
