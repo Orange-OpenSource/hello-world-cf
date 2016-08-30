@@ -18,18 +18,18 @@ The only interesting part for developers to use this repo as a cheatsheet is to 
 
 ## FAQ (And you should read it to know some other aspect of Cloud Foundry)
 
-### Why it use a php version 5.6 and not php 7.0 ?
+### Why it use php 5.6 instead of php 7.0 ?
 
 The current [php-buildpack](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.18) doesn't have redis extension inside the php 7.0 version.
 
-If you do not use redis here you can change to php version 7.
+If you do not use redis here you can change to php 7.0 .
 
-### Why the file [php.ini](/.bp-config/php/php.ini) is overwrite ?
+### Why the file [php.ini](/.bp-config/php/php.ini) is overwritten ?
 
 To change the value of the key `session.name` which is set to `JSESSIONID` by default (we change it to `PHPSESSIONID`).
 
 Indeed, `JSESSIONID` create a sticky session with Cloud Foundry. In our example we do not want to use sticky session but use a real session sharing over redis.
 
-### Why the file [php-fpm.conf](/.bp-config/php/php-fpm.conf) is overwrite ?
+### Why the file [php-fpm.conf](/.bp-config/php/php-fpm.conf) is overwritten ?
 
 To uncomment `catch_workers_output = yes` which let us use logging with stdout and stderr in php.
