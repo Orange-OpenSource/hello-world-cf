@@ -4,7 +4,7 @@ This is the support for a Cloud Foundry workshop.
 
 It covers a wide range of usecases in PHP inside Cloud Foundry and intend to show how to be a [12 factors app](https://12factor.net).
 
-The only interesting part for developers to use this repo as a cheatsheet is to see components inside [cloud-php-samples](cloud-php-samples) which are made independent for this purpose.
+The only interesting part for developers to use this repo as a cheatsheet is to see components inside [cloud-php-samples](cloud-php-samples) which are made independent for this purpose (you can deploy these component without the rest of the app).
 
 ## How to deploy
 
